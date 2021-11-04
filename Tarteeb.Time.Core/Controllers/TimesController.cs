@@ -1,11 +1,9 @@
 ﻿using Dapper;
 using Microsoft.AspNetCore.Mvc;
 using RESTFulSense.Controllers;
-using System.Data;
 using System.Linq;
 using System.Threading.Tasks;
 using Tarteeb.Time.Core.Data;
-using Tarteeb.Time.Core.Model;
 
 namespace Tarteeb.Time.Core.Controllers
 {
