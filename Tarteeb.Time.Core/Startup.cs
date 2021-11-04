@@ -4,6 +4,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
+using Tarteeb.Time.Core.Data;
 
 namespace Tarteeb.Time.Core
 {
@@ -21,6 +22,8 @@ namespace Tarteeb.Time.Core
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "Tarteeb.Time.Core", Version = "v1" });
             });
+            //Register DI
+            services.AddTransient<IDbConnectionFactory, DbConnectionFactory>();
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
